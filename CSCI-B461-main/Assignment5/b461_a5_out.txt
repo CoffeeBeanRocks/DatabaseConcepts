@@ -1,0 +1,736 @@
+CREATE DATABASE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 19
+INSERT 0 8
+INSERT 0 19
+INSERT 0 15
+INSERT 0 5
+INSERT 0 46
+INSERT 0 13
+INSERT 0 66
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+Problem 1
+CREATE FUNCTION
+CREATE TRIGGER
+INSERT INTO Company VALUES("Google","NewYork");
+psql:B561_Assignment4.sql:572: ERROR:  cname already exists
+CONTEXT:  PL/pgSQL function check_company_key_constraint() line 4 at RAISE
+Problem 2
+CREATE FUNCTION
+CREATE TRIGGER
+INSERT INTO worksFor VALUES(1001,"Airbnb", 65000);
+psql:B561_Assignment4.sql:597: ERROR:  cname does not exists in Company
+CONTEXT:  PL/pgSQL function check_worksfor_foreignkey_constraint() line 4 at RAISE
+Problem 3
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE TRIGGER
+INSERT 0 1
+INSERT 0 1
+ a  
+----
+ 15
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+ a  
+----
+ 15
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+ a  
+----
+ 15
+(1 row)
+
+INSERT 0 1
+INSERT 0 1
+  a  
+-----
+  15
+ 101
+(2 rows)
+
+DROP TABLE
+DROP TABLE
+DROP TABLE
+Problem 4
+CREATE FUNCTION
+CREATE TRIGGER
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ pid | skill 
+-----+-------
+(0 rows)
+
+ pid  |      skill       
+------+------------------
+ 2002 | AI
+ 2002 | Databases
+ 2002 | Networks
+ 2002 | OperatingSystems
+ 2002 | Programming
+ 2002 | Devops
+(6 rows)
+
+ pid  |      skill       
+------+------------------
+ 2003 | AI
+ 2003 | Databases
+ 2003 | Networks
+ 2003 | OperatingSystems
+ 2003 | Programming
+ 2003 | Cloud
+(6 rows)
+
+ pid  | skill  
+------+--------
+ 2004 | Design
+(1 row)
+
+ pid | skill 
+-----+-------
+(0 rows)
+
+DELETE 13
+DELETE 3
+DELETE 5
+DELETE 5
+Problem 5
+CREATE FUNCTION
+CREATE TRIGGER
+SELECT 66
+CREATE FUNCTION
+UPDATE 1
+ pid1 | pid2 
+------+------
+ 1005 | 1015
+ 1005 | 1001
+ 1005 | 1012
+(3 rows)
+
+ retain_data 
+-------------
+ 
+(1 row)
+
+UPDATE 1
+ pid1 | pid2 
+------+------
+ 1012 | 1011
+ 1012 | 1005
+(2 rows)
+
+ retain_data 
+-------------
+ 
+(1 row)
+
+DROP TABLE
+Problem 6
+  cname  | headquarter  
+---------+--------------
+ Amazon  | Seattle
+ Apple   | Cupertino
+ Google  | MountainView
+ Netflix | LosGatos
+(4 rows)
+
+Problem 7
+ pid  |  pname   | set_intersection 
+------+----------+------------------
+ 1001 | Jean     | {1002}
+ 1002 | Vidya    | {1004,1015}
+ 1003 | Anna     | {1004,1006,1015}
+ 1004 | Qin      | {1006,1016,1018}
+ 1005 | Megan    | {1015}
+ 1006 | Ryan     | {1016}
+ 1007 | Danielle | {1018}
+ 1008 | Emma     | {1001}
+ 1009 | Hasan    | {1018}
+ 1010 | Linda    | {1018}
+ 1011 | Nick     | {1002,1012,1015}
+ 1012 | Eric     | {1001,1004}
+ 1013 | Lisa     | {1004,1018}
+ 1014 | Deepa    | {1001,1002,1004}
+ 1015 | Chris    | {1002,1016}
+ 1016 | YinYue   | {}
+ 1017 | Latha    | {}
+ 1018 | Arif     | {1015}
+ 1019 | John     | {1001,1004}
+(19 rows)
+
+Problem 8
+CREATE FUNCTION
+ pid  | pname 
+------+-------
+ 1011 | Nick
+(1 row)
+
+Problem 9
+ cname  
+--------
+ Amazon
+(1 row)
+
+Problem 10
+CREATE TYPE
+CREATE VIEW
+CREATE TYPE
+                                                            ?column?                                                             
+---------------------------------------------------------------------------------------------------------------------------------
+ {}
+ {"({})"}
+ {"({})","(\"{(AI)}\")"}
+ {"({})","(\"{(AI),(Databases)}\")"}
+ {"({})","(\"{(AI),(Databases),(Networks)}\")"}
+ {"({})","(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")"}
+ {"({})","(\"{(AI),(Databases),(Networks),(Programming)}\")"}
+ {"({})","(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"({})","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(AI),(Databases),(Programming)}\")"}
+ {"({})","(\"{(AI),(Networks)}\")"}
+ {"({})","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"({})","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(AI),(Networks),(Programming)}\")"}
+ {"({})","(\"{(AI),(OperatingSystems)}\")"}
+ {"({})","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(AI),(Programming)}\")"}
+ {"({})","(\"{(Databases)}\")"}
+ {"({})","(\"{(Databases),(Networks)}\")"}
+ {"({})","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"({})","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"({})","(\"{(Databases),(OperatingSystems)}\")"}
+ {"({})","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(Databases),(Programming)}\")"}
+ {"({})","(\"{(Networks)}\")"}
+ {"({})","(\"{(Networks),(OperatingSystems)}\")"}
+ {"({})","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(Networks),(Programming)}\")"}
+ {"({})","(\"{(OperatingSystems)}\")"}
+ {"({})","(\"{(OperatingSystems),(Programming)}\")"}
+ {"({})","(\"{(Programming)}\")"}
+ {"(\"{(AI)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases),(Networks)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Networks),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Databases),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Networks),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(AI),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(Networks)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Networks),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Databases),(Programming)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(Networks)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Databases),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Networks)}\")"}
+ {"(\"{(Networks)}\")","(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Networks)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Networks)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Networks)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems)}\")"}
+ {"(\"{(Networks),(OperatingSystems)}\")","(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Networks),(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems),(Programming)}\")","(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Networks),(OperatingSystems),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks),(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Networks),(Programming)}\")"}
+ {"(\"{(Networks),(Programming)}\")","(\"{(OperatingSystems)}\")"}
+ {"(\"{(Networks),(Programming)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(Networks),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(OperatingSystems)}\")"}
+ {"(\"{(OperatingSystems)}\")","(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(OperatingSystems)}\")","(\"{(Programming)}\")"}
+ {"(\"{(OperatingSystems),(Programming)}\")"}
+ {"(\"{(OperatingSystems),(Programming)}\")","(\"{(Programming)}\")"}
+ {"(\"{(Programming)}\")"}
+(497 rows)
+
+DROP DATABASE
